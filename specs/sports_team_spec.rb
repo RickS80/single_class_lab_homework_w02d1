@@ -13,11 +13,11 @@ class TestTeam < Minitest::Test
     assert_equal("Ferguson", team.coach)
   end
 
-  def test_set_team_name
+  def test_set_team_coach
     players = ["Smith", "Jackson", "Jordan", "Yaoming", "O'Neill"]
     team = Team.new("Jaguars", players, "Ferguson")
-    team.set_name("Panthers")
-    assert_equal("Panthers", team.name)
+    team.set_coach("Morinho")
+    assert_equal("Morinho", team.coach)
   end
 
 
