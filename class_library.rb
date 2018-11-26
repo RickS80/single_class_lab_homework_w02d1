@@ -29,5 +29,8 @@ class Library
       end
     end
   end
-  
+
+  def add_new_book(book_name)
+    @books << book_name
+  end
 end

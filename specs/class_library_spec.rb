@@ -64,4 +64,31 @@ class TestLibrary < MiniTest::Test
     assert_equal(details_to_expect, library.rental_info("lord_of_the_rings"))
   end
 
+  def test_add_new_book
+    library = Library.new
+    new_book = {
+      title: "hitchhikers guide to the galaxy",
+      rental_details: {
+        student_name: "",
+        date: ""}
+      }
+    updated_library =   [
+        {
+          title: "lord_of_the_rings",
+          rental_details: {
+            student_name: "Jeff",
+            date: "01/12/16"
+          }
+        },
+        {
+          title: "hitchhikers guide to the galaxy",
+          rental_details: {
+            student_name: "",
+            date: ""
+          }
+        }
+      ]
+    assert_equal(updated_library, library.add_new_book(new_book))
+  end
+
 end
