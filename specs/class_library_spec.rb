@@ -42,4 +42,17 @@ class TestLibrary < MiniTest::Test
     assert_equal(books_to_expect, our_books)
   end
 
+  def test_book_info
+    library = Library.new()
+    book_to_expect =
+          {
+            title: "lord_of_the_rings",
+            rental_details: {
+              student_name: "Jeff",
+              date: "01/12/16"
+            }
+          }
+    assert_equal(book_to_expect, library.book_info("lord_of_the_rings"))
+  end
+
 end

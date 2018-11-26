@@ -14,4 +14,12 @@ class Library
     ]
   end
 
+  def book_info(book_name)
+    for book in @books
+      if book[:title] == book_name
+        return book
+      end
+    end
+  end  
+
 end
