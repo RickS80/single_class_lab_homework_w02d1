@@ -46,4 +46,18 @@ class TestTeam < Minitest::Test
     assert_equal(false, team.player_in_team("Kowalski"))
   end
 
+  def test_win_game__win
+    players = ["Smith", "Jackson", "Jordan", "Yaoming", "O'Neill"]
+    team = Team.new("Jaguars", players, "Ferguson")
+    team.win_game(true)
+    assert_equal(1, team.points)
+  end
+
+  def test_win_game__lose
+    players = ["Smith", "Jackson", "Jordan", "Yaoming", "O'Neill"]
+    team = Team.new("Jaguars", players, "Ferguson")
+    team.win_game(false)
+    assert_equal(0, team.points)
+  end
+
 end

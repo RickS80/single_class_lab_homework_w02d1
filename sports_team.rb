@@ -18,4 +18,10 @@ class Team
     return @players.include?(player_name)
   end
 
+  def win_game(boolean)
+    if boolean == true
+      @points += 1
+    end
+  end
+
 end
