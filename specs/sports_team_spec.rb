@@ -33,4 +33,18 @@ class TestTeam < Minitest::Test
     assert_equal(["Smith", "Jackson", "Jordan", "Yaoming", "O'Neill", "O'hara"], lineup)
   end
 
+  def test_player_in_team__exists
+    players = ["Smith", "Jackson", "Jordan", "Yaoming", "O'Neill"]
+    team = Team.new("Jaguars", players, "Ferguson")
+    assert_equal(true, team.player_in_team("Jordan"))
+
+  end
+
+  def test_player_in_team__does_not_exist
+    players = ["Smith", "Jackson", "Jordan", "Yaoming", "O'Neill"]
+    team = Team.new("Jaguars", players, "Ferguson")
+    assert_equal(false, team.player_in_team("Kowalski"))
+
+  end
+
 end

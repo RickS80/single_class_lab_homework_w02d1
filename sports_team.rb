@@ -13,4 +13,8 @@ class Team
     @players.push(player_name)
   end
 
+  def player_in_team(player_name)
+    return @players.include?(player_name)
+  end
+
 end
