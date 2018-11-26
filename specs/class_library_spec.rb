@@ -91,4 +91,15 @@ class TestLibrary < MiniTest::Test
     assert_equal(updated_library, library.add_new_book(new_book))
   end
 
+  def test_change_rental_details
+    library = Library.new
+    # Act
+    result = library.rental_details("lord_of_the_rings", "Brian", "27/11/18")
+    rental_details = {
+      student_name: "Brian",
+      date: "27/11/18"}
+      # Assert
+    assert_equal(rental_details, result)
+  end
+
 end
