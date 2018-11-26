@@ -98,7 +98,7 @@ class TestLibrary < MiniTest::Test
     rental_details = {
       student_name: "Brian",
       date: "27/11/18"}
-      # Assert
+    # Assert
     assert_equal(rental_details, result)
   end
 
