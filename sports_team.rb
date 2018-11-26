@@ -8,4 +8,8 @@ class Team
     @coach = coach
   end
 
+  def set_name(name)
+    @name = name
+  end
+  
 end
