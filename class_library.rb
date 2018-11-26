@@ -20,6 +20,14 @@ class Library
         return book
       end
     end
-  end  
+  end
 
+  def rental_info(book_name)
+    for book in @books
+      if book[:title] == book_name
+        return book[:rental_details]
+      end
+    end
+  end
+  
 end
