@@ -1,17 +1,9 @@
 class Library
   attr_reader :books
 
-  def initialize()
-    @books =
-    [
-      {
-        title: "lord_of_the_rings",
-        rental_details: {
-          student_name: "Jeff",
-          date: "01/12/16"
-        }
-      }
-    ]
+  def initialize(books)
+    @books = books
+
   end
 
   def book_info(book_name)
@@ -42,9 +34,10 @@ class Library
     for book in @books
       if book[:title] == book_name
         book[:rental_details] = new_rental_details
+        return book[:rental_details]
       end
     end
-    return book[:rental_details]
+
   end
 
 end
